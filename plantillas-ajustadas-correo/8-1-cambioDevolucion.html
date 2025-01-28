@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Notificación de compra en Soho." />
+    <title>cambio y devolución</title>
+    <style>
+      /* Estilos para compatibilidad con Outlook */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato', sans-serif;
+      }
+      table {
+        max-width: 100%;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .container-seccion {
+        width: 33%;
+        margin: 0 auto;
+      }
+      .content {
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+        color: #122b36;
+      }
+      .content2 {
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+        color: #122b36;
+      }
+      h1 {
+        color: #122b36;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28.8px;
+      }
+      p {
+        color: #122b36;
+        font-size: 16px;
+        line-height: 19.2px;
+        margin: 0px;
+      }
+      .card {
+        padding: 32px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 6px 6px 0 0;
+        background-color: #ffffff;
+      }
+      .card-text {
+        background-color: #d2d2d2;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .order-text {
+        text-align: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 23.76px;
+      }
+      .detail {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21.6px;
+        text-align: center;
+        margin-bottom: 22px;
+        margin-top: 18px;
+      }
+      .products-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        margin-bottom: 12px;
+      }
+      .sales-for, .sales-number {
+        padding-top: 15px;
+      }
+      .sales-title, .sales-title-number {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .sales-text-number {
+        word-wrap: break-word;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        padding-bottom: 16px;
+      }
+      .card-text-green {
+        background-color: #03a696;
+        padding: 18px;
+        border-radius: 8px;
+      }
+      .order-text-green {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 15px;
+      }
+      .order-text-green span {
+        font-weight: 700;
+        color: #ffffff;
+      }
+      .address{
+        text-align: start;
+        margin-bottom: 20px;
+        padding: 32px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
+      }
+      .card-secondary{
+        text-align: start;
+        margin-bottom: 20px;
+        padding: 20px;
+        
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+      }
+
+    </style>
+  </head>
+  <body style="margin: 0px; padding: 0px; font-family: Arial, sans-serif; background-color: #ffffff;"">
+    <table>
+    <tr>
+        <td class="content" style="color: #122b36; font-family: Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 1.5;">
+          <div class='logo'>
+            <a><img alt='logo' height='61px' width="143px" src='cid:logo'></a>
+          </div>
+        </td>
+        </tr>
+      <tr>
+        <td class="content">
+          <h1>Cambio y devolución</h1>
+          <p style="margin-bottom: 28px;">
+            <span style="font-weight: 700;">
+              Hola, {{NombreUsuario}}
+            </span>
+            hemos recibido los productos de tu solicitud.
+            Nos pondremos en contacto en breve para gestionar el cambio.
+          </p>
+
+          <!-- Card Section -->
+          <table class="card" style="width: 100%; border-spacing: 0; border-collapse: collapse; background-color: #ffffff;">
+            <tr style="border-collapse: collapse; width: 100%; border-bottom: 1px solid #d5cece;">
+              <td style="padding: 20px;"> <!-- Padding aplicado aquí -->
+                <table style="width: 100%; border-spacing: 0; border-collapse: collapse;">
+                  <tr>
+                    <td class="card-text" style="border-radius: 8px;">
+                      <p class="order-text">
+                        Solicitud Nº
+                        <br />
+                        <span>{{SolicitudNo}}</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class=""><p class="detail">Detalle de tu solicitud</p></td>
+                  </tr>
+                  <tr style="text-align: start;">
+                    <td class="products-text">
+                      <span class="products-title"><span style="font-weight: 700;">{{NombreDelProducto}}</span></span> - <span>{{PesoProducto}}</span> - <span>{{Material}}</span> - <span>{{PiedraAdorno}}</span> - <span>{{Cantidad}}</span> - <span>{{Precio}}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="sales-for" style="font-weight: 700; text-align: start;">
+                      Vendido por:
+                      <span class="sales-shop">{{NombreDeTienda}}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="sales-number" style="text-align: start;">
+                      <p class="sales-title-number">Número de pedido:</p>
+                      <p class="sales-text-number">
+                        <span>{{NumeroDePedido}}</span>
+                      </p>
+                    </td>
+                  </tr>
+
+                  
+                  <tr>
+                    <!-- Fila para margen superior simulado -->
+                    <td style="height: 20px; line-height: 20px; font-size: 0;">&nbsp;</td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="card-text-green" style="padding: 0; font-size: 16px; font-weight: 500; line-height: 1.5; color: #146D81;">
+                      <p class="order-text-green" style="margin: 0; padding: 20px;text-align: center;">
+                        Realizaremos la devolución de tu dinero de acuerdo al método de pago recibido 
+                      </p>
+                    </td>
+                  </tr>
+                  
+                  
+                 
+                
+                </table>
+              </td>
+            </tr>
+
+            
+          </table>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="content2">
+          <!-- Card Section -->
+          <table style="margin-top: 20px; border-collapse: collapse; width: 100%; border: 1px solid #146d81;">
+            <tr class="card-secondary">
+                <td style="padding: 20px;">
+                    <p style="color: #146d81; margin: 0; font-size: 16px; font-weight: 500; line-height: 18.27px; padding-right: 10px;">
+                        Puedes revisar y gestionar tu compra en tu sección
+                        <img alt="imagen vector" height="24px" width="24px" src="cid:vector">
+                      </p>
+                </td>
+                <td style="padding: 20px; text-align: center; margin-bottom: 20px; color: #146D81;">
+                    <!-- Botón como enlace -->
+                    <a href="{{link}}" 
+                       style="
+                          color: white; 
+                          background-color: #146D81; 
+                          padding: 12px 20px; 
+                          text-align: center; 
+                          border-radius: 8px; 
+                          font-family: Arial, sans-serif; 
+                          font-weight: normal; 
+                          font-size: 16px; 
+                          text-decoration: none; 
+                          display: inline-block;">
+                      Ir a Cambio y devolución
+                    </a>
+                  </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      
+
+      <tr>
+        <td class="content2">
+            <table>
+      <tr>
+        <td style="padding: 20px; text-align: start; color: #122b36; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; line-height: 16.8px; padding-bottom: 8px;">
+          ¿Dudas o preguntas? contáctanos:
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 20px; text-align: start; color: #122b36; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; line-height: 16.8px; padding-right: 20px; vertical-align: middle;">
+          <a href="mailto:ayuda@soho.market" style="text-decoration: none; color: inherit;">
+            <img alt='mail' height='14px' src='cid:mail'>
+            ayuda@soho.market
+          </a>
+        </td>
+      
+        <td style="color: #122b36; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; line-height: 16.8px; vertical-align: middle;">
+          <a href="tel:+56976506134" style="text-decoration: none; color: inherit;">
+            <img alt='phone' height='14px' src='cid:phone'>
+            +56 2214 2542 2
+          </a>
+        </td>
+      </tr>      
+            </table>
+        </td>
+      </tr>
+
+    </table>
+  </body>
+</html>

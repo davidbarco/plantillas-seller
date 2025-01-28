@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <title>pedido procesado</title>
+  <style>
+      header,
+      body {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+      }
+
+      .container {
+          max-width: 436px;
+          margin: auto;
+          background-color: white;
+      }
+
+      .logo {
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          height: 40px;
+          width: 90px;
+      }
+
+      .title {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: #122B36;
+          text-align: center;
+          font-weight: 700;
+      }
+
+      .subtitle {
+          text-align: center;
+          color: #122B36;
+          margin-bottom: 10px;
+          /* font-weight: 600; */
+          margin-bottom: 25px;
+      }
+
+      .card1 {
+          border: 0.5px solid #146D81;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-content-card1 {
+          padding: 20px;
+      }
+
+      .card-content-card2-1 {
+          padding: 20px 20px 0;
+      }
+
+      .card-content-card2-2 {
+          padding: 0 20px 10px;
+      }
+
+      .card-content-card2-2 p {
+          text-align: left;
+      }
+
+      .text-card1 {
+          padding-right: 20px;
+          margin: 0;
+          font-weight: 500;
+          color: #146D81;
+          max-width: 210px;
+      }
+
+      .btn {
+          background-color: #146D81;
+          color: white;
+          border-radius: 10px;
+          padding: 8px;
+          cursor: pointer;
+          text-decoration: none;
+          font-weight: 500;
+      }
+
+      .card2 {
+          border: 0.5px solid #146D81;
+          box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+          text-align: center;
+          margin: 25px 0;
+      }
+
+      .title-details {
+          font-size: 18px;
+          margin-bottom: 20px;
+          color: #122B36;
+          font-weight: 700;
+      }
+
+      .text-left {
+          text-align: left;
+      }
+
+      .margin-0 {
+          margin: 0 auto;
+      }
+
+      .center {
+          text-align: center;
+      }
+
+      .blue-soho {
+          color: #122B36;
+      }
+
+      .solicitud{
+        color: #7849B8;
+      }
+
+      .turquesa-soho {
+          color: #146D81;
+      }
+
+      .calipso-soho {
+          color: #03A696;
+      }
+
+      .fw700 {
+          font-weight: 700;
+      }
+
+      .fw600 {
+          font-weight: 600;
+      }
+
+      .fw500 {
+          font-weight: 500;
+      }
+
+      .fw400 {
+          font-weight: 400;
+      }
+
+      .fz24 {
+          font-size: 24px;
+      }
+
+      .fz18 {
+          font-size: 18px;
+      }
+
+      .fz14 {
+          font-size: 14px;
+      }
+
+      .fz13 {
+          font-size: 13px;
+      }
+
+      .div-container {
+          border-radius: 8px;
+          min-height: 45px;
+          max-height: 63px;
+          display: grid;
+          place-items: center;
+          margin: 14px 0;
+      }
+
+      .div-containerVend{
+        border-radius: 8px;
+          min-height: 20px;
+          max-height: 23px;
+          text-align: start;
+          display: grid;
+          justify-content: start;
+          place-items: center;
+          margin-top: 5px;
+          padding: 3px;
+          
+
+      }
+
+      .div-container-orden {
+          border-radius: 8px;
+          height: 80px;
+          display: grid;
+          place-items: center;
+          margin: 14px 0;
+          background-color: rgb(18, 43, 54, 0.1);
+      }
+
+      .card4 {
+          color: #FF5733;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .back-calipso {
+          color: white;
+          background-color: #03A696;
+      }
+      .back-calipsoVend {
+          color: #122B36;
+          background-color: #ECE0FD;
+      }
+      
+      .line {
+          color: #146D81;
+          height: 0.5px;
+      }
+
+      .help {
+          font-size: 14px;
+          padding: 0 20px;
+      }
+
+      .d-ig {
+          display: inline-grid;
+      }
+
+      .space-icon-txt {
+          padding-left: 4px;
+          padding-right: 8px;
+      }
+
+      table {
+          width: 100%;
+      }
+
+      .m-top-0 {
+          margin-top: 0;
+      }
+
+      .m-botton-4 {
+          margin-bottom: 4px;
+      }
+
+      .m-botton-10 {
+          margin-bottom: 10px;
+      }
+
+      .dif {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+      }
+
+      .divide-word {
+          word-break: break-word;
+          line-break: normal;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          line-height: .75rem;
+      }
+  </style>
+</head>
+
+<body>
+
+<div class='logo'>
+  <a><img alt='logo' height='40px' src='cid:logo'></a>
+</div>
+
+<div class='container'>
+  <h1 class='title'>Tu pedido ha sido procesado</h1>
+  <p class='subtitle'>
+    <span style="font-weight: 700;">
+    Hola, {{NombreUsuario}}
+  </span>en breve recibirás un correo de confirmación a medida que los vendedores acepten tus órdenes. Este proceso puede tomar unos minutos, pero no excederá las 5 horas hábiles.</p>
+
+  <div class='card4' style="margin-bottom: 20px; background-color: #FFECE6;">
+    <div class='card-content-card1' style="display: inline-flex; ">
+        <div class="car">
+            <a><img alt="car" height="24px" width="24px" src="cid:car"><a>
+            </div>
+      <p style="margin: 0; margin-left: 10px;">Recuerda que una vez recibido tu producto dispones de 30 días para hacer algún cambio o devolución según nuestra política de satisfacción garantizada.</p>
+      
+    </div>
+  </div>
+
+  
+
+
+  <div class='card2'>
+    <div>
+      <div class='card-content-card2-1'>
+
+        <div class='div-container-orden'>
+          <p class='fw700'>Orden de Compra Nº <br> <span class='fz13 fw600 divide-word'>{{order_number}}</span></p>
+        </div>
+
+        <p class='title-details'>Detalle de tu Pedido</p>
+
+
+        {{#if separadorPedido}}
+        <div class='line m-botton-10'>
+          <hr>
+        </div>
+        {{/if}}
+
+        {{#each stores}}
+        <div class='div-containerVend back-calipsoVend'>   
+            <p class='fw600 blue-soho text-left' style="margin: 0px;">Vendido por: {{nameV}}</p>
+        </div>
+
+        <p class='fw600 solicitud text-left'>Número de pedido: <br> <span
+            class='fz13 fw400 divide-word'>{{pedidoId}}</span></p>
+
+        <table class='margin-0'>
+          {{#each products}}
+          <tr>
+            <td class="fz14 blue-soho text-left">
+                <span class="products-title"><span style="font-weight: 700;">{{name}}</span></span> - <span>{{PesoProducto}}</span> - <span>{{Material}}</span> - <span>{{PiedraAdorno}}</span> - <span>{{amount}}</span> - <span>{{Precio}}</span>
+            </td>
+          </tr>
+          {{/each}}
+        </table>
+
+        {{#if separadorPedido}}
+        <div class='line m-botton-10'>
+          <hr>
+        </div>
+        {{/if}}
+        {{/each}}
+
+        <div class='div-container back-calipso'>
+          <p class='fw700'>Monto pagado: ${{total_amount}}</p>
+        </div>
+      </div>
+      <div class='line'>
+        <hr>
+      </div>
+      <div class='card-content-card2-2'>
+        <p class='fw600 m-botton-4'>Dirección de envío:</p>
+        <p class='fw400 m-top-0'>{{address}} <br>{{phone}}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class='card1' style="margin-bottom: 20px;">
+    <div class='card-content-card1' style="display: inline-flex;">
+      <p class='text-card1 d-ig'>Puedes revisar y gestionar tu compra en tu sección →</p>
+      <a class='btn d-ig' style="color: white; " href='https://preview.soho.market/cl/anonymousMyShoppingSearch'>Ir a mis compras</a>
+    </div>
+  </div>
+
+  <div class='help fw400 blue-soho fz13'>
+    <div>
+      ¿Dudas o preguntas? contáctanos
+    </div>
+
+    <div class='dif'>
+      <img alt='mail' height='14px' src='cid:mail' style='margin-top: 4px;'>
+      <span class='space-icon-txt'>
+          ayuda@soho.market
+        </span>
+
+      <img alt='phone' height='14px' src='cid:phone'>
+      <span class='space-icon-txt'>
+          +56 9 7650 6134
+        </span>
+    </div>
+
+  </div>
+
+
+</div>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
   <meta charset='UTF-8'>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-  <title>pedido cancelado</title>
+  <title>¡Todavía no has confirmado tu venta!</title>
   <style>
       header,
       body {
@@ -38,7 +38,7 @@
           text-align: center;
           color: #122B36;
           margin-bottom: 10px;
-          /* font-weight: 600; */
+          font-weight: 600;
           margin-bottom: 25px;
       }
 
@@ -53,7 +53,7 @@
       }
 
       .card-content-card2-1 {
-          padding: 20px 20px 0;
+          padding: 40px;
       }
 
       .card-content-card2-2 {
@@ -190,9 +190,12 @@
       }
 
       .card4 {
-          color: #FF5733;
+          color: #122B36;
           border-radius: 8px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19.2px;
       }
 
       .back-calipso {
@@ -258,6 +261,11 @@
           overflow-wrap: break-word;
           line-height: .75rem;
       }
+      .congrats{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21.6px;
+      }
   </style>
 </head>
 
@@ -268,94 +276,52 @@
 </div>
 
 <div class='container'>
-  <h1 class='title'>Información importante</h1>
+  <h1 class='title'>¡Todavía no has confirmado tu venta!</h1>
   <p class='subtitle'>
     <span style="font-weight: 700;">
-    Hola {{NombreUsuario}}, 
-  </span>lamentamos informarte que los siguientes productos han sido cancelados:</p>
+  </span>Te recordamos que aún no has confirmado tu venta dentro de la plataforma, realiza esta acción a la brevedad para continuar.</p>
 
-  <div class='card4' style="margin-bottom: 20px; background-color: #FFECE6;">
-    <div class='card-content-card1' style="display: inline-flex; ">
-        <div class="car">
-            <a><img alt="car" height="24px" width="24px" src="cid:car"><a>
-            </div>
-      <p style="margin: 0; margin-left: 10px;">Recuerda que una vez recibido tu producto dispones de 30 días para hacer algún cambio o devolución según nuestra política de satisfacción garantizada.</p>
-      
+  <div class='card1' style="margin-bottom: 20px;">
+    <div class='card-content-card1' style="display: inline-flex;">
+      <p class='text-card1 d-ig'>Puedes revisar y gestionar tu compra en tu sección →</p>
+      <a class='btn d-ig' style="color: white; " href='https://preview.soho.market/cl/anonymousMyShoppingSearch'>Ir a Mis Ventas</a>
     </div>
   </div>
 
   
-
-
   <div class='card2'>
     <div>
       <div class='card-content-card2-1'>
 
+        <p class="congrats">Información de tu venta:</p>
+
         <div class='div-container-orden'>
-          <p class='fw700'>Orden de Compra Nº <br> <span class='fz13 fw600 divide-word'>{{order_number}}</span></p>
+          <p class='fw700'>Número de pedido <br> <span class='fz13 fw600 divide-word'>{{order_number}}</span></p>
         </div>
 
-        <p class='title-details'>Compra (s) cancelada (s)</p>
-
-
-        {{#if separadorPedido}}
-        <div class='line m-botton-10'>
-          <hr>
-        </div>
-        {{/if}}
-
-        {{#each stores}}
-        <div class='div-containerVend back-calipsoVend'>   
-            <p class='fw600 blue-soho text-left' style="margin: 0px;">Vendido por: {{nameV}}</p>
-        </div>
-
-        <p class='fw600 solicitud text-left'>Número de pedido: <br> <span
-            class='fz13 fw400 divide-word'>{{pedidoId}}</span></p>
-
-        <table class='margin-0'>
-          {{#each products}}
-          <tr>
-            <td class="fz14 blue-soho text-left">
-                <span class="products-title"><span style="font-weight: 700;">{{name}}</span></span> - <span>{{PesoProducto}}</span> - <span>{{Material}}</span> - <span>{{PiedraAdorno}}</span> - <span>{{amount}}</span> - <span>{{Precio}}</span>
-            </td>
-          </tr>
-          {{/each}}
-        </table>
-
-        {{#if separadorPedido}}
-        <div class='line m-botton-10'>
-          <hr>
-        </div>
-        {{/if}}
-        {{/each}}
 
         <div class='div-container back-calipso'>
           <p class='fw700'>Monto pagado: ${{total_amount}}</p>
         </div>
 
-        <div class='div-container back-calipsoRealiza'>
-            <p class='fw700'>Realizaremos la devolución de tu dinero de acuerdo al método de pago recibido</p>
-          </div>
-
       </div>
-      <div class='line'>
-        <hr>
-      </div>
-      <div class='card-content-card2-2'>
-        <p class='fw600 m-botton-4'>Dirección de envío:</p>
-        <p class='fw400 m-top-0'>{{address}} <br>{{phone}}</p>
-      </div>
-
+      
+      
     </div>
 
   </div>
 
-  <div class='card1' style="margin-bottom: 20px;">
-    <div class='card-content-card1' style="display: inline-flex;">
-      <p class='text-card1 d-ig'>Puedes revisar y gestionar tu compra en tu sección →</p>
-      <a class='btn d-ig' style="color: white; " href='https://preview.soho.market/cl/anonymousMyShoppingSearch'>Ir a mis compras</a>
+  <div class='card4' style="margin-bottom: 20px; background-color: #FFECE6;">
+    <div class='card-content-card1' style="display: inline-flex; ">
+        <div class="car">
+            <a><img alt="info" height="24px" width="24px" src="cid:info"><a>
+            </div>
+      <p style="margin: 0; margin-left: 10px;">Recuerda revisar constantemente la plataforma para estar al día con tus solicitudes</p>
+      
     </div>
   </div>
+
+  
 
   <div class='help fw400 blue-soho fz13'>
     <div>

@@ -341,7 +341,7 @@
         </div>
         {{/if}}
 
-        {{#each stores}}
+        {{#each storesConfirm}}
         <div class='div-containerVend back-calipsoVend'>   
             <p class='fw600 blue-soho text-left' style="margin: 0px;">Vendido por: {{nameV}}</p>
         </div>
@@ -350,7 +350,7 @@
             class='fz13 fw400 divide-word'>{{pedidoId}}</span></p>
 
         <table class='margin-0'>
-          {{#each products}}
+          {{#each productsConfirm}}
           <tr>
             <td class="fz14 blue-soho text-left">
                 <span class="products-title"><span style="font-weight: 700;">{{name}}</span></span> - <span>{{PesoProducto}}</span> - <span>{{Material}}</span> - <span>{{PiedraAdorno}}</span> - <span>{{amount}}</span> - <span>{{Precio}}</span>
@@ -377,7 +377,7 @@
         </div>
         {{/if}}
 
-        {{#each stores}}
+        {{#each storesCancel}}
         <div class='div-containerVend back-calipsoVend'>   
             <p class='fw600 blue-soho text-left' style="margin: 0px;">Vendido por: {{nameV}}</p>
         </div>
@@ -386,7 +386,7 @@
             class='fz13 fw400 divide-word'>{{pedidoId}}</span></p>
 
         <table class='margin-0'>
-          {{#each products}}
+          {{#each productsCancel}}
           <tr>
             <td class="fz14 blue-soho text-left">
                 <span class="products-title"><span style="font-weight: 700;">{{name}}</span></span> - <span>{{PesoProducto}}</span> - <span>{{Material}}</span> - <span>{{PiedraAdorno}}</span> - <span>{{amount}}</span> - <span>{{Precio}}</span>
